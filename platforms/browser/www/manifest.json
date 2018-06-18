@@ -1,0 +1,17 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Beera",
+  "short_name": "Beera",
+  "version": "io.cordova.hellocordova",
+  "description": "A beer application that tells you the time in fridge for each beer.",
+  "author": "Elsoft Team",
+  "icons": [
+    {
+      "src": "res/icon/beer_64.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    }
+  ],
+  "start_url": "index.html"
+}
