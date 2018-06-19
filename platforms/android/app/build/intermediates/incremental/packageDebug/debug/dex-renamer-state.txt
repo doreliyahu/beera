@@ -1,4 +1,4 @@
-#Mon Jun 18 20:42:17 IDT 2018
+#Tue Jun 19 00:46:37 IDT 2018
 base.0=C\:\\Users\\doreliyahu\\Documents\\Works\\Beera\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
 file.0=C\:\\Users\\doreliyahu\\Documents\\Works\\Beera\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

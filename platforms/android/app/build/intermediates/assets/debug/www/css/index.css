@@ -116,6 +116,7 @@ h1 {
 
 .content {
     padding: 4px;
+    padding-top: 59px;
 }
 
 .beers {
@@ -161,34 +162,51 @@ h1 {
     align-content: center;
 }
 
+
+::placeholder {
+    color: white;
+}
+
 .search_bar {
-    width: calc(100% - 46px);
-    margin: 4px;
+    width: calc(100% - 54px);
     border: 0.2px solid;
     border-color: gray;
     border-radius: 2px;
-    background: url('../res/icons/search.png') no-repeat scroll 7px 7px;
-    background-color: white;
-    height: 40px;
-    padding-left: 38px;
+    background-color: transparent;
+    color: white;
     font-size: 18px;
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
 }
 
 .top_nav {
+    left: 0;
+    right: 0;
     width: 100%;
-    height: 55px;
+    height: 100%;
     box-shadow: rgba(0,0,0,0.24);
-    background-color: white;
 }
 
 .top_nav_menu_button {
-    margin: 7px;
-    margin-top: 15.5px;
+    left: 0;
     float: left;
+    width: 24px;
+    display: inline-block;
+}
+
+.top_nav_search_button {
+    right: 0;
+    float: right;
+    width: 24px;
+    display: inline-block;
 }
 
 .menu {
-    position: absolute;
+    left: 0;
+    top: 0;
+    position: fixed;
+    float: left;
     background-color: white;
     width: 80%;
     height: 100%;
@@ -204,10 +222,21 @@ h1 {
 }
 
 .shadow_screen {
-    position: absolute;
+    left:0;
+    top:0;
+    position: fixed;
+    float: left;
     width: 100%;
     height: 100%;
     background-color: black;
     opacity: 0.6;
     z-index: 2;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: darkgoldenrod;
+    padding: 10px;
 }

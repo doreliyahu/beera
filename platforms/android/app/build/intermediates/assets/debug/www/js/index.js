@@ -51,6 +51,10 @@ beers.append(beer.getObject());
 beers.append(beer2.getObject());
 beers.append(beer2.getObject());
 beers.append(beer.getObject());
+beers.append(beer2.getObject());
+beers.append(beer.getObject());
+beers.append(beer2.getObject());
+beers.append(beer.getObject());
 
 function searchLineChanged(text) {
     let beers = document.getElementsByClassName('beers')[0];
@@ -62,6 +66,22 @@ function searchLineChanged(text) {
             beers.children[i].style.display = '';
         }
     }
+}
+
+function showSearchLine() {
+    let search_bar_nav = document.getElementById('search_bar_nav');
+    search_bar_nav.style.display = '';
+
+    let top_nav = document.getElementById('top_nav');
+    top_nav.style.display = 'none';
+}
+
+function hideSearchLine() {
+    let search_bar_nav = document.getElementById('search_bar_nav');
+    search_bar_nav.style.display = 'none';
+
+    let top_nav = document.getElementById('top_nav');
+    top_nav.style.display = '';
 }
 
 function showMenu() {

@@ -44,8 +44,13 @@ var app = {
 };
 
 app.initialize();
-let beer = new Beer('Corona', 'extra 5.7%', 'bla bla', 'corona.png');
-let beer2 = new Beer('Winesethphen', '6.6%', 'bla bla', 'weihenstephaner.jpg');
+let beer = new Beer(111, 'Corona', 'extra 5.7%', 'bla bla', 'corona.png');
+let beer2 = new Beer(112, 'Winesethphen', '6.6%', 'bla bla', 'weihenstephaner.jpg');
+// var beers_arr = {
+//     beer.id: beer,
+//     beer2.id: beer2
+// };
+
 let beers = document.getElementsByClassName('beers')[0];
 beers.append(beer.getObject());
 beers.append(beer2.getObject());
@@ -60,7 +65,7 @@ function searchLineChanged(text) {
     let beers = document.getElementsByClassName('beers')[0];
     for (var i = 0; i < beers.children.length; ++i) {
         var current_beer_brand = beers.children[i].children[0].innerHTML;
-        if (current_beer_brand.toLowerCase().includes(text.toLowerCase()) == false) {
+        if (current_beer_brand.toLowerCase().includes(text.toLowerCase()) === false) {
             beers.children[i].style.display = 'none';
         } else {
             beers.children[i].style.display = '';
@@ -98,4 +103,8 @@ function hideMenu() {
 
     let menu = document.getElementById('menu');
     menu.style.display = 'none';
+}
+
+function beer_clicked(object){
+    //alert(beers_arr[object.children[0].innerText].brand);
 }

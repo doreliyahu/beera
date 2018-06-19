@@ -219,6 +219,8 @@ h1 {
     width: calc(100% - 20px);
     background-color: gold;
     padding: 10px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .shadow_screen {
@@ -239,4 +241,15 @@ h1 {
     right: 0;
     background-color: darkgoldenrod;
     padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.menu_cell {
+    padding: 10px;
+    font-size: 15px;
+}
+
+.menu_cell_span {
+    margin-left: 10px;
 }
