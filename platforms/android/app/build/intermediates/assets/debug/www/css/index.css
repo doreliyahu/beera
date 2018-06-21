@@ -114,6 +114,7 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
+
 .content {
     padding: 4px;
     padding-top: 59px;
@@ -121,6 +122,9 @@ h1 {
 
 .beers {
     width: calc(100%);
+    height: calc(100% - 1px);
+    overflow-y: scroll;
+
 }
 
 .beer {
@@ -206,11 +210,13 @@ h1 {
     left: 0;
     top: 0;
     position: fixed;
+    transition: 0.5s;
     float: left;
     background-color: white;
-    width: 80%;
+    width: 0;
     height: 100%;
     z-index: 4;
+    overflow-x: hidden;
 }
 
 .menu_title {
@@ -219,6 +225,8 @@ h1 {
     width: calc(100% - 20px);
     background-color: gold;
     padding: 10px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .shadow_screen {
@@ -239,4 +247,15 @@ h1 {
     right: 0;
     background-color: darkgoldenrod;
     padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.menu_cell {
+    padding: 10px;
+    font-size: 15px;
+}
+
+.menu_cell_span {
+    margin-left: 10px;
 }

@@ -20,6 +20,18 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        var beer = new Beer('111', 'Corona', 'extra 5.7%', 'bla bla', 'corona.png');
+        var beer2 = new Beer('112', 'Winesethphen', '6.6%', 'bla bla', 'weihenstephaner.jpg');
+        var beers_arr = {};
+        beers_arr[beer.getId()] = beer;
+        beers_arr[beer2.getId()] = beer2;
+
+        var beers = document.getElementsByClassName('beers')[0];
+        for (var i = 0; i < 5; ++i) {
+            for (var key in beers_arr) {
+                beers.append(beers_arr[key].getObject());
+            }
+        }
     },
 
     // deviceready Event Handler
@@ -44,25 +56,9 @@ var app = {
 };
 
 app.initialize();
-let beer = new Beer(111, 'Corona', 'extra 5.7%', 'bla bla', 'corona.png');
-let beer2 = new Beer(112, 'Winesethphen', '6.6%', 'bla bla', 'weihenstephaner.jpg');
-// var beers_arr = {
-//     beer.id: beer,
-//     beer2.id: beer2
-// };
-
-let beers = document.getElementsByClassName('beers')[0];
-beers.append(beer.getObject());
-beers.append(beer2.getObject());
-beers.append(beer2.getObject());
-beers.append(beer.getObject());
-beers.append(beer2.getObject());
-beers.append(beer.getObject());
-beers.append(beer2.getObject());
-beers.append(beer.getObject());
 
 function searchLineChanged(text) {
-    let beers = document.getElementsByClassName('beers')[0];
+    var beers = document.getElementsByClassName('beers')[0];
     for (var i = 0; i < beers.children.length; ++i) {
         var current_beer_brand = beers.children[i].children[0].innerHTML;
         if (current_beer_brand.toLowerCase().includes(text.toLowerCase()) === false) {
@@ -94,7 +90,7 @@ function showMenu() {
     shadow_screen.style.display = '';
 
     let menu = document.getElementById('menu');
-    menu.style.display = '';
+    menu.style.width = '80%';
 }
 
 function hideMenu() {
@@ -102,9 +98,15 @@ function hideMenu() {
     shadow_screen.style.display = 'none';
 
     let menu = document.getElementById('menu');
-    menu.style.display = 'none';
+    menu.style.width = '0';
 }
 
 function beer_clicked(object){
-    //alert(beers_arr[object.children[0].innerText].brand);
+    console.log(object.getAttribute('beer-id'))
 }
+
+//
+// window.onscroll = function () {
+//     var a = window.scrollY;
+//     console.log(a);
+// };

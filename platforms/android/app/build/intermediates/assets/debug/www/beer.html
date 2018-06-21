@@ -33,42 +33,36 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/beer.css">
     <title>Beera</title>
 </head>
 <body>
-    <div class="header">
-        <div class="shadow_screen" id="shadow_screen" style="display: none;" onclick="hideMenu()"></div>
-        <div class="menu" id="menu">
-            <div class="menu_title">
-                <img src="res/icon/beer_128.png" />
+<div class="header">
+    <div id="search_bar_nav" class="top_nav">
+        <img src="res/icons/back.png" class="top_nav_menu_button" onclick="" />
+    </div>
+</div>
+<div class="beer_content">
+    <div class="beer_page">
+        <div class="image">
+            <img src="res/icon/beer_128.png" />
+        </div>
+        <div class="title">Corona</div>
+        <div class="content">
+            <div class="stars">
+                <!-- Add icon of empty star and one of full star -->
+                <img src="res/icons/back.png" />
+                <img src="res/icons/back.png" />
+                <img src="res/icons/back.png" />
+                <img src="res/icons/back.png" />
+                <img src="res/icons/back.png" />
             </div>
-            <div class="menu_cell">
-                <img src="res/icons/menu_gray.png" />
-                <span class="menu_cell_span">Search beer !!!</span>
-            </div><hr />
-            <div class="menu_cell">
-                <img src="res/icons/menu_gray.png" />
-                <span class="menu_cell_span">Search beer</span>
-            </div><hr />
-            <div class="menu_cell">
-                <img src="res/icons/menu_gray.png" />
-                <span class="menu_cell_span">Search beer</span>
-            </div><hr />
-        </div>
-        <div id="top_nav" class="top_nav">
-            <img src="res/icons/menu.png" class="top_nav_menu_button" onclick="showMenu()" />
-            <img src="res/icons/search.png" class="top_nav_search_button" onclick="showSearchLine()" />
-        </div>
-        <div id="search_bar_nav" class="top_nav" style="display: none;">
-            <img src="res/icons/back.png" class="top_nav_menu_button" onclick="hideSearchLine()" />
-            <input id="search_bar" class="search_bar" placeholder="search beer name ..." oninput="searchLineChanged(event.srcElement.value)" />
+            <div>hello to you all</div>
         </div>
     </div>
-    <div class="content" onscroll="renderMoreBeers()">
-        <div class="beers"></div>
-    </div>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/beers.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+</div>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/beers.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

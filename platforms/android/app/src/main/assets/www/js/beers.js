@@ -6,6 +6,9 @@ class Beer {
         this.info = info;
         this.img = img;
     }
+    getId() {
+        return this.id;
+    }
     serialize() {
         return {
             "brand": this.brand,
@@ -18,9 +21,7 @@ class Beer {
         let beer = document.createElement('div');
         beer.setAttribute('class', 'beer');
 
-        let beer_id = document.createElement('span');
-        beer_id.innerText = this.id;
-        beer_id.style.display = 'none';
+        beer.setAttribute("beer-id", this.id);
 
         let beer_brand = document.createElement('div');
         beer_brand.setAttribute('class', 'beer_brand');
@@ -38,7 +39,6 @@ class Beer {
         beer_image.setAttribute('class', 'beer_image');
         beer_image.setAttribute('src', 'res/beers/' + this.img);
 
-        beer.appendChild(beer_id);
         beer.appendChild(beer_brand);
         beer.appendChild(beer_name);
         //beer.appendChild(beer_info);

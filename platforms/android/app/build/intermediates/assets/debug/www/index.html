@@ -36,25 +36,39 @@
         <title>Beera</title>
     </head>
     <body>
+    <div class="app">
         <div class="header">
             <div class="shadow_screen" id="shadow_screen" style="display: none;" onclick="hideMenu()"></div>
-            <div class="menu" id="menu" style="display: none;">
+            <div class="menu" id="menu">
                 <div class="menu_title">
-                    <img src="res/beer_128.png" />
+                    <img src="img/icon/beer_128.png" />
                 </div>
+                <div class="menu_cell">
+                    <img src="img/icons/menu_gray.png"/>
+                    <span class="menu_cell_span">Search beer !!!</span>
+                </div><hr />
+                <div class="menu_cell">
+                    <img src="img/icons/menu_gray.png"/>
+                    <span class="menu_cell_span">Search beer</span>
+                </div><hr />
+                <div class="menu_cell">
+                    <img src="img/icons/menu_gray.png"/>
+                    <span class="menu_cell_span">Search beer</span>
+                </div><hr />
             </div>
             <div id="top_nav" class="top_nav">
-                <img src="res/icons/menu.png" class="top_nav_menu_button" onclick="showMenu()" />
-                <img src="res/icons/search.png" class="top_nav_search_button" onclick="showSearchLine()"/>
+                <img src="img/icons/menu.png" class="top_nav_menu_button" onclick="showMenu()" />
+                <img src="img/icons/search.png" class="top_nav_search_button" onclick="showSearchLine()"/>
             </div>
             <div id="search_bar_nav" class="top_nav" style="display: none;">
-                <img src="res/icons/back.png" class="top_nav_menu_button" onclick="hideSearchLine()" />
+                <img src="img/icons/back.png" class="top_nav_menu_button" onclick="hideSearchLine()" />
                 <input id="search_bar" class="search_bar" placeholder="search beer name ..." oninput="searchLineChanged(event.srcElement.value)" />
             </div>
         </div>
-        <div class="content">
+        <div class="content" onscroll="renderMoreBeers()">
             <div class="beers"></div>
         </div>
+    </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/beers.js"></script>
         <script type="text/javascript" src="js/index.js"></script>

@@ -1,14 +1,27 @@
 class Beer {
-    constructor(brand, name, info, img) {
+    constructor(id, brand, name, info, img) {
+        this.id = id;
         this.brand = brand;
         this.name = name;
         this.info = info;
         this.img = img;
     }
-
+    getId() {
+        return this.id;
+    }
+    serialize() {
+        return {
+            "brand": this.brand,
+            "name": this.name,
+            "info": this.info,
+            "img": this.img
+        }
+    }
     getObject() {
         let beer = document.createElement('div');
         beer.setAttribute('class', 'beer');
+
+        beer.setAttribute("beer-id", this.id);
 
         let beer_brand = document.createElement('div');
         beer_brand.setAttribute('class', 'beer_brand');
@@ -30,6 +43,9 @@ class Beer {
         beer.appendChild(beer_name);
         //beer.appendChild(beer_info);
         beer.appendChild(beer_image);
+
+        beer.setAttribute("onclick", "beer_clicked(this)");
+
         return beer;
     }
 }
